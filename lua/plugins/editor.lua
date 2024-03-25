@@ -162,7 +162,7 @@ return {
       require("telescope").load_extension("file_browser")
     end,
   },
-  -- animations
+  -- Animations
   {
     "echasnovski/mini.animate",
     event = "VeryLazy",
