@@ -24,3 +24,4 @@ See comment [here](./lua/config/keymaps.lua)
 - Add a border to hover over documentation when press Shift + K.
 - Change default notification timeout to 10 seconds.
 - Disabled [flash.nvim](https://github.com/folke/flash.nvim)
+- Disabled "o" and "<C-o>>" mapping to launch file default system application.

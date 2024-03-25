@@ -147,6 +147,12 @@ return {
               end,
               ["<PageUp>"] = actions.preview_scrolling_up,
               ["<PageDown>"] = actions.preview_scrolling_down,
+              -- Disable open file with default system application
+              o = false,
+            },
+            ["i"] = {
+              -- Disable open file with default system application
+              ["<C-o>"] = false,
             },
           },
         },
