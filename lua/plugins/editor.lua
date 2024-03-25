@@ -162,6 +162,16 @@ return {
       require("telescope").load_extension("file_browser")
     end,
   },
+  -- animations
+  {
+    "echasnovski/mini.animate",
+    event = "VeryLazy",
+    opts = function(_, opts)
+      opts.scroll = {
+        enable = false,
+      }
+    end,
+  },
   {
     "folke/flash.nvim",
     enabled = false,
