@@ -25,3 +25,4 @@ See comment [here](./lua/config/keymaps.lua)
 - Change default notification timeout to 10 seconds.
 - Disabled [flash.nvim](https://github.com/folke/flash.nvim)
 - Disabled "o" and "<C-o>>" mapping to launch file default system application.
+- Disabled [nvim-neo-tree/neo-tree.nvim](https://github.com/nvim-neo-tree/neo-tree.nvim)
