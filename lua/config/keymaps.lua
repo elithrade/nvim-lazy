@@ -18,3 +18,8 @@ keymap.set("n", "<C-a>", "gg<S-v>G")
 keymap.set("n", "<tab>", ":bnext<Return>", opts)
 keymap.set("n", "<s-tab>", ":bprev<Return>", opts)
 keymap.set("n", "bd", ":bdelete<Return>", opts)
+
+-- Split window
+---- Split window
+keymap.set("n", "ss", ":split<Return>", opts)
+keymap.set("n", "sv", ":vsplit<Return>", opts)
