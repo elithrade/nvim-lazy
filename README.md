@@ -23,3 +23,4 @@ See comment [here](./lua/config/keymaps.lua)
 - Suppress "No information available" notification in [noice.nvim](https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://github.com/folke/noice.nvim&ved=2ahUKEwiYmd_s3I6FAxX_s1YBHTSyDqAQFnoECAYQAQ&usg=AOvVaw1sogSR1BTc2Hp5hZ7TNBpv).
 - Add a border to hover over documentation when press Shift + K.
 - Change default notification timeout to 10 seconds.
+- Disabled [flash.nvim](https://github.com/folke/flash.nvim)
