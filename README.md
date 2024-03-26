@@ -12,13 +12,18 @@ For Windows
 For Linux
 `git clone git@github.com:elithrade/nvim-lazy.git ~/.config/nvim`
 
+## Dependencies
+
+- [ripgrep](https://github.com/BurntSushi/ripgrep), is required for live_grep and grep_string and is the first priority for find_files.
+- On Linux, `fd` might cause issues with telescope-file-browser, I removed `fd` from my WSL2 at work.
+
 ## Custom key maps
 
 See comment [here](./lua/config/keymaps.lua)
 
 ## Custom tweaks
 
-- Change colorscheme to [onedark](https://github.com/navarasu/onedark.nvim)
+- Custom colorscheme defined in [colorscheme.lua](./lua/plugins/colorscheme.lua)
 - Add [telescope-file-browser.nvim](https://github.com/nvim-telescope/telescope-file-browser.nvim) extension and [remapped default keys](./lua/plugins/editor.lua). Most telescope-file-browser keys starts with `;`, `sf` to open telescope-file-browser.
 - Suppress "No information available" notification in [noice.nvim](https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://github.com/folke/noice.nvim&ved=2ahUKEwiYmd_s3I6FAxX_s1YBHTSyDqAQFnoECAYQAQ&usg=AOvVaw1sogSR1BTc2Hp5hZ7TNBpv).
 - Add a border to hover over documentation when press Shift + K.
