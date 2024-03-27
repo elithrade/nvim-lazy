@@ -1,6 +1,6 @@
 return {
   -- add onedark
-  -- { "navarasu/onedark.nvim" },
+  { "navarasu/onedark.nvim" },
   { "folke/tokyonight.nvim" },
 
   -- Configure LazyVim to load onedark
@@ -8,7 +8,9 @@ return {
     "LazyVim/LazyVim",
     opts = {
       -- colorscheme = "onedark",
-      colorscheme = "tokyonight",
+      -- colorscheme = "tokyonight",
+      -- style = "moon",
+      colorscheme = "catppuccin",
     },
   },
 }
