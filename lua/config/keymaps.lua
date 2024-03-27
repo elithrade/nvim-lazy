@@ -17,7 +17,6 @@ keymap.set("n", "<C-a>", "gg<S-v>G")
 -- Buffer switching
 keymap.set("n", "<tab>", ":bnext<Return>", opts)
 keymap.set("n", "<s-tab>", ":bprev<Return>", opts)
-keymap.set("n", "<s-b>", ":bdelete<Return>", opts)
 
 -- Split window
 ---- Split window
