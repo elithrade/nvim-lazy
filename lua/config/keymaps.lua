@@ -21,3 +21,11 @@ keymap.set("n", "<s-tab>", ":bprev<Return>", opts)
 -- Split window
 keymap.set("n", "ss", ":split<Return>", opts)
 keymap.set("n", "sv", ":vsplit<Return>", opts)
+
+-- Debugging
+keymap.set("n", "<F8>", [[:lua require"dap".toggle_breakpoint()<CR>]], { noremap = true })
+keymap.set("n", "<F9>", [[:lua require"dap".continue()<CR>]], { noremap = true })
+keymap.set("n", "<F10>", [[:lua require"dap".step_over()<CR>]], { noremap = true })
+keymap.set("n", "<S-F10>", [[:lua require"dap".step_into()<CR>]], { noremap = true })
+keymap.set("n", "<F12>", [[:lua require"dap.ui.widgets".hover()<CR>]], { noremap = true })
+keymap.set("n", "<F5>", [[:lua require"osv".launch({port = 8086})<CR>]], { noremap = true })
