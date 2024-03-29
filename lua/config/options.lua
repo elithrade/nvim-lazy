@@ -8,5 +8,8 @@ vim.cmd([[let &t_Ce = "\e[4:0m"]])
 
 -- Set default shell to pwsh if running Windows
 if vim.fn.has("win64") == 1 then
-  vim.o.shell = "pwsh"
+  vim.opt.shell = "pwsh"
+  -- https://github.com/neovim/neovim/issues/13893
+  vim.opt.shellcmdflag = "-nologo -noprofile -ExecutionPolicy RemoteSigned -command"
+  vim.opt.shellxquote = ""
 end
