@@ -5,25 +5,6 @@ return {
     cmd = "IncRename",
     config = true,
   },
-  -- Refactoring tool
-  {
-    "ThePrimeagen/refactoring.nvim",
-    keys = {
-      {
-        "<leader>r",
-        function()
-          require("refactoring").select_refactor({
-            show_success_message = false,
-          })
-        end,
-        mode = "v",
-        noremap = true,
-        silent = true,
-        expr = false,
-      },
-    },
-    opts = {},
-  },
   -- Change surround
   -- Old text                    Command         New text
   --------------------------------------------------------------------------------
