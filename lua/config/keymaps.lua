@@ -18,10 +18,6 @@ keymap.set("n", "<C-a>", "gg<S-v>G")
 keymap.set("n", "<tab>", ":bnext<Return>", opts)
 keymap.set("n", "<s-tab>", ":bprev<Return>", opts)
 
--- Split window
-keymap.set("n", "ss", ":split<Return>", opts)
-keymap.set("n", "sv", ":vsplit<Return>", opts)
-
 -- Debugging
 keymap.set("n", "<F8>", [[:lua require"dap".toggle_breakpoint()<CR>]], { noremap = true })
 keymap.set("n", "<F9>", [[:lua require"dap".continue()<CR>]], { noremap = true })
