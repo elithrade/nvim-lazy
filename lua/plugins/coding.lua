@@ -21,51 +21,20 @@ return {
     event = "VeryLazy",
     opts = {},
   },
-  -- TODO copied from https://www.lazyvim.org/extras/lang/rust rustacenvim full spec
   {
     "mrcjkb/rustaceanvim",
-    version = "^4", -- Recommended
-    ft = { "rust" },
     opts = {
       server = {
-        on_attach = function(_, bufnr)
-          vim.keymap.set("n", "<leader>cR", function()
-            vim.cmd.RustLsp("codeAction")
-          end, { desc = "Code Action", buffer = bufnr })
-          vim.keymap.set("n", "<leader>dr", function()
-            vim.cmd.RustLsp("debuggables")
-          end, { desc = "Rust Debuggables", buffer = bufnr })
-        end,
-        default_settings = {
-          -- rust-analyzer language server configuration
-          ["rust-analyzer"] = {
-            cargo = {
-              allFeatures = true,
-              loadOutDirsFromCheck = true,
-              runBuildScripts = true,
-            },
-            -- Add clippy lints for Rust.
-            checkOnSave = {
-              allFeatures = true,
-              command = "clippy",
-              extraArgs = { "--no-deps" },
-            },
-            procMacro = {
-              enable = true,
-              ignored = {
-                ["async-trait"] = { "async_trait" },
-                ["napi-derive"] = { "napi" },
-                ["async-recursion"] = { "async_recursion" },
-              },
-            },
+        capabilities = {
+          experimental = {
+            -- https://github.com/mrcjkb/rustaceanvim/issues/303
+            -- Neovim bug where rust-analyzer codaAction extract function
+            -- inserts '/' before '}', this is a workaround suggested by 'rami3l'
+            -- in the linked thread.
+            snippetTextEdit = false,
           },
         },
       },
     },
-    config = function(_, opts)
-      vim.g.rustaceanvim = vim.tbl_deep_extend("keep", vim.g.rustaceanvim or {}, opts or {})
-      -- capabilities is always nil
-      print(vim.g.rustaceanvim.server.capabilities)
-    end,
   },
 }
