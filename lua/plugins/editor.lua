@@ -10,7 +10,7 @@ return {
     },
     keys = {
       {
-        "<leader>fP",
+        "<localleader>p",
         function()
           require("telescope.builtin").find_files({
             cwd = require("lazy.core.config").options.root,
@@ -19,7 +19,7 @@ return {
         desc = "Find [P]lugin File",
       },
       {
-        ";f",
+        "<localleader>f",
         function()
           local builtin = require("telescope.builtin")
           builtin.find_files({
@@ -30,7 +30,7 @@ return {
         desc = "Lists [f]iles in your current working directory, respects .gitignore",
       },
       {
-        ";r",
+        "<localleader>r",
         function()
           local builtin = require("telescope.builtin")
           builtin.live_grep({
@@ -40,7 +40,7 @@ return {
         desc = "Search for a string in your current working directory and get results live as you type, respects .gitignore",
       },
       {
-        "\\\\",
+        "<localleader><localleader>",
         function()
           local builtin = require("telescope.builtin")
           builtin.buffers()
@@ -48,7 +48,7 @@ return {
         desc = "Lists open buffers",
       },
       {
-        ";t",
+        "<localleader>t",
         function()
           local builtin = require("telescope.builtin")
           builtin.help_tags()
@@ -56,7 +56,7 @@ return {
         desc = "Lists available help tags and opens a new window with the relevant help info on <cr>",
       },
       {
-        ";;",
+        "<localleader>;",
         function()
           local builtin = require("telescope.builtin")
           builtin.resume()
@@ -64,7 +64,7 @@ return {
         desc = "Resume the previous telescope picker",
       },
       {
-        ";e",
+        "<localleader>e",
         function()
           local builtin = require("telescope.builtin")
           builtin.diagnostics()
@@ -72,7 +72,7 @@ return {
         desc = "Lists Diagnostics for all open buffers or a specific buffer",
       },
       {
-        ";s",
+        "<localleader>s",
         function()
           local builtin = require("telescope.builtin")
           builtin.treesitter()
@@ -80,7 +80,7 @@ return {
         desc = "Lists Function names, variables, from Treesitter",
       },
       {
-        "sf",
+        "<leader>e",
         function()
           local telescope = require("telescope")
 
