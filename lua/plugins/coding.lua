@@ -21,20 +21,4 @@ return {
     event = "VeryLazy",
     opts = {},
   },
-  {
-    "mrcjkb/rustaceanvim",
-    opts = {
-      server = {
-        capabilities = {
-          experimental = {
-            -- https://github.com/mrcjkb/rustaceanvim/issues/303
-            -- Neovim bug where rust-analyzer codaAction extract function
-            -- inserts '/' before '}', this is a workaround suggested by 'rami3l'
-            -- in the linked thread.
-            snippetTextEdit = false,
-          },
-        },
-      },
-    },
-  },
 }
