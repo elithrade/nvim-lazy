@@ -13,3 +13,5 @@ if vim.fn.has("win64") == 1 then
   vim.opt.shellcmdflag = "-nologo -noprofile -ExecutionPolicy RemoteSigned -command"
   vim.opt.shellxquote = ""
 end
+
+vim.api.nvim_set_option_value("colorcolumn", "80", {})
