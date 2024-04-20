@@ -21,4 +21,12 @@ return {
     event = "VeryLazy",
     opts = {},
   },
+  {
+    "neovim/nvim-lspconfig",
+    opts = {
+      diagnostics = {
+        virtual_text = false,
+      },
+    },
+  },
 }
