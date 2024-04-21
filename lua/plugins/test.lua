@@ -14,6 +14,7 @@ return {
           end,
         })
       )
+      table.insert(opts.adapters, require("rustaceanvim.neotest"))
     end,
   },
 }
