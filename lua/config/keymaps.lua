@@ -17,9 +17,6 @@ keymap.set("n", "N", "Nzzzv")
 -- Delete a word backwards
 keymap.set("n", "dW", "vbd")
 
--- Select all
-keymap.set("n", "<C-a>", "gg<S-v>G")
-
 -- Buffer switching
 keymap.set("n", "<tab>", ":bnext<Return>", opts)
 keymap.set("n", "<s-tab>", ":bprev<Return>", opts)
