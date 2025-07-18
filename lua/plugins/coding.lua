@@ -32,6 +32,7 @@ return {
       diagnostics = {
         virtual_text = false,
       },
+      inlay_hints = { enabled = false },
     },
   },
 }
