@@ -23,8 +23,8 @@ return {
         function()
           local builtin = require("telescope.builtin")
           builtin.find_files({
-            no_ignore = false,
-            hidden = true,
+            -- no_ignore = false,
+            -- hidden = true,
           })
         end,
         desc = "Lists [f]iles in your current working directory, respects .gitignore",
