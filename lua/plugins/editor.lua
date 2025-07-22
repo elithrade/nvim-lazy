@@ -183,4 +183,15 @@ return {
       { "<c-\\>", "<cmd><C-U>TmuxNavigatePrevious<cr>" },
     },
   },
+  {
+    "ibhagwan/fzf-lua",
+    opts = function(_, opts)
+      opts.winopts = {
+        preview = {
+          vertical = "up:65%",
+          layout = "vertical",
+        },
+      }
+    end,
+  },
 }
