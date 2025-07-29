@@ -32,6 +32,21 @@ return {
     "rcarriga/nvim-notify",
     opts = {
       timeout = 10000,
+      render = "compact",
+    },
+  },
+  {
+    "folke/snacks.nvim",
+    opts = {
+      notifier = {
+        icons = {
+          error = "",
+          warn = "",
+          info = "",
+          debug = "",
+          trace = "",
+        },
+      },
     },
   },
 }
