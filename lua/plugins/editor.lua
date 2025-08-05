@@ -63,14 +63,14 @@ return {
         end,
         desc = "Resume the previous telescope picker",
       },
-      {
-        "<localleader>e",
-        function()
-          local builtin = require("telescope.builtin")
-          builtin.diagnostics()
-        end,
-        desc = "Lists Diagnostics for all open buffers or a specific buffer",
-      },
+      -- {
+      --   "<localleader>e",
+      --   function()
+      --     local builtin = require("telescope.builtin")
+      --     builtin.diagnostics()
+      --   end,
+      --   desc = "Lists Diagnostics for all open buffers or a specific buffer",
+      -- },
       {
         "<localleader>s",
         function()
@@ -207,6 +207,23 @@ return {
         filtered_items = {
           visible = true,
         },
+      },
+    },
+  },
+  {
+    "folke/trouble.nvim",
+    keys = {
+      {
+        "<localleader>e",
+        function()
+          local trouble = require("trouble")
+          if trouble.is_open("diagnostics") then
+            trouble.close("diagnostics")
+          else
+            trouble.open("diagnostics")
+          end
+        end,
+        desc = "Toggle diagnostics for all open buffers",
       },
     },
   },
